@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Hub</title>
+    <link rel="stylesheet" href="Styles.css">
+    <style>
+        /* JavaScript adicionará a classe 'clicked' ao elemento clicado */
+        .box.clicked {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Luz fraca ao redor da caixa */
+        }
+
+        .discord-img-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .discord-img img {
+            border-radius: 10%; /* Opcional: para um logo circular */
+        }
+
+        .button-mini {
+            background-color: #7289da; /* Azul do Discord */
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+
+        .button-mini:hover {
+            background-color: #5b6eae; /* Azul mais escuro para efeito de hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://cdn.discordapp.com/attachments/1269517553244442666/1273938925551091732/NXT_Methods_-_.jpg?ex=66c06f94&is=66bf1e14&hm=24de0dbc752c426d5d3c2c3173d28bcd653158adae8b96c7bd37084e1f230aac&" alt="Ícone">
+            <h1>Cat Hub</h1>
+        </div>
+        <p class="description">Aqui nesse site você encontra todos os executores atualizados!</p>
+        
+        <div class="box" onclick="handleClick(this)">
+            <p class="title">Fluxus</p>
+            <img src="https://via.placeholder.com/400x200?text=Executor+1" alt="Fluxus">
+            <p class="desc">Updated Fluxus Executor!</p>
+            <a href="https://example.com/executor1" class="button">Download</a>
+        </div>
+        <div class="box" onclick="handleClick(this)">
+            <p class="title">Delta</p>
+            <img src="https://via.placeholder.com/400x200?text=Executor+2" alt="Delta">
+            <p class="desc">Updated Delta Executor!</p>
+            <a href="https://example.com/executor2" class="button">Download</a>
+        </div>
+        <div class="box" onclick="handleClick(this)">
+            <p class="title">Arceus</p>
+            <img src="https://via.placeholder.com/400x200?text=Executor+3" alt="Arceus">
+            <p class="desc">Updated Arceus Executor!</p>
+            <a href="https://example.com/executor3" class="button">Download</a>
+        </div>
+        <div class="box" onclick="handleClick(this)">
+            <p class="title">Codex</p>
+            <img src="https://via.placeholder.com/400x200?text=Executor+4" alt="Codex">
+            <p class="desc">Updated Codex Executor!</p>
+            <a href="https://example.com/executor4" class="button">Download</a>
+        </div>
+        <div class="box" onclick="handleClick(this)">
+            <p class="title">Hydrogen</p>
+            <img src="https://via.placeholder.com/400x200?text=Executor+5" alt="Hydrogen">
+            <p class="desc">Updated Hydrogen Executor!</p>
+            <a href="https://example.com/executor5" class="button">Download</a>
+        </div>
+        <div class="box" onclick="handleClick(this)">
+            <p class="title">Vega X</p>
+            <img src="https://via.placeholder.com/400x200?text=Executor+6" alt="Vega X">
+            <p class="desc">Updated Vega X Executor!</p>
+            <a href="https://example.com/executor6" class="button">Download</a>
+        </div>
+        
+        <!-- Imagem do Discord -->
+        <div class="discord-img-container">
+            <div class="discord-img">
+                <img src="https://cdn.discordapp.com/attachments/1269821932950392914/1273745404424486913/636e0a6cc3c481a15a141738_icon_clyde_white_RGB.png?ex=66bfbb59&is=66be69d9&hm=5d02eb3b205d118c19d9f4e1ea778671c10891e1f2e035c097e88a9f0ac87f37&" alt="Discord Logo" width="50">
+                <span>Discord</span>
+                <a href="https://discord.gg/DJU9ABpwwC" class="button-mini">Entrar</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="credits">
+        <p><strong>Créditos:</strong> Site desenvolvido por <strong>NoXiter</strong></p>
+        <p>© Copyright - 2024</p>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
