@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #121212; /* Cor de fundo da página */
+    color: #e0e0e0;
+    background-image: 
+        radial-gradient(circle, rgba(255, 255, 255, 0.5) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.5) 1px, transparent 1px);
+    background-size: 20px 20px; /* Tamanho das bolinhas */
+    background-position: 0 0, 10px 10px; /* Posições alternadas para criar o padrão */
+    background-repeat: repeat;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: #1e1e1e; /* Cor de fundo da caixa */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    margin-bottom: 80px; /* Espaço para a seção de créditos */
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.header img {
+    width: 50px; /* Largura da imagem */
+    height: 50px; /* Altura da imagem */
+    border-radius: 50%; /* Faz a imagem circular */
+    margin-right: 10px; /* Espaço entre a imagem e o título */
+}
+
+h1 {
+    color: #f5f5f5;
+    margin: 0;
+}
+
+.description {
+    margin-bottom: 20px;
+    color: #b0b0b0;
+}
+
+.box {
+    background-color: #2c2c2c;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    text-align: center; /* Centraliza o conteúdo da caixa */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.box.clicked {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.9); /* Luz fraca ao redor da caixa */
+}
+
+.box .title {
+    margin: 10px 0;
+    color: #e0e0e0;
+    font-size: 24px; /* Tamanho da fonte aumentado */
+    font-weight: bold; /* Fonte em negrito */
+}
+
+.box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.box .desc {
+    margin: 5px 0 0;
+    color: #b0b0b0; /* Cor da descrição */
+    font-size: 16px; /* Tamanho da fonte da descrição */
+}
+
+.box a.button {
+    display: block; /* Faz o botão ocupar a largura total da caixa */
+    width: 100%; /* Largura total */
+    padding: 12px 0; /* Ajusta o padding para um botão mais largo verticalmente */
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #ffffff, #b0b0b0); /* Degradê branco para cinza */
+    color: #000; /* Cor do texto em contraste com o degradê */
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombreamento */
+}
+
+.box a.button:hover {
+    background: linear-gradient(to bottom, #e0e0e0, #808080); /* Degradê escurecido para hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombreamento mais intenso ao passar o mouse */
+}
+
+.discord-img-container {
+    background-color: #1e1e1e; /* Cor de fundo cinza que se estende por toda a largura */
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza horizontalmente o conteúdo */
+}
+
+.discord-img {
+    display: flex; /* Usa flexbox para alinhar a imagem e o texto horizontalmente */
+    align-items: center; /* Alinha verticalmente a imagem e o texto */
+}
+
+.discord-img img {
+    margin-right: 10px; /* Adiciona espaço à direita da imagem */
+}
+
+.discord-img span {
+    font-family: Arial, sans-serif; /* Define a fonte como Arial */
+    font-size: 24px; /* Tamanho da fonte grande */
+    color: #ffffff; /* Cor do texto */
+    font-weight: bold; /* Negrito para destacar o texto */
+    margin-right: 10px; /* Espaço entre o texto e o botão */
+}
+
+.discord-img a.button-mini {
+    display: inline-block;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5865f2; /* Cor padrão do Discord */
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.discord-img a.button-mini:hover {
+    background-color: #4752c4; /* Cor de hover do Discord */
+}
+
+.credits {
+    background-color: #1e1e1e;
+    padding: 10px;
+    color: #b0b0b0;
+    border-top: 1px solid #333;
+    text-align: center;
+    font-size: 14px;
+}
+
+.credits strong {
+    font-weight: bold;
+}
