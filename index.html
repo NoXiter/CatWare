@@ -1,102 +1,75 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cat Ware</title>
-    <link rel="stylesheet" href="Styles.css">
-    <style>
-        /* JavaScript adicionará a classe 'clicked' ao elemento clicado */
-        .box.clicked {
-            transform: scale(1.05);
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Luz fraca ao redor da caixa */
-        }
-
-        .discord-img-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-top: 20px;
-        }
-
-        .discord-img img {
-            border-radius: 10%; /* Opcional: para um logo circular */
-        }
-
-        .button-mini {
-            background-color: #7289da; /* Azul do Discord */
-            color: white;
-            text-decoration: none;
-            padding: 5px 10px;
-            border-radius: 3px;
-            font-size: 14px;
-        }
-
-        .button-mini:hover {
-            background-color: #5b6eae; /* Azul mais escuro para efeito de hover */
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css"> <!-- Link para o CSS externo -->
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <img src="https://cdn.discordapp.com/attachments/1269517553244442666/1273938925551091732/NXT_Methods_-_.jpg?ex=66c06f94&is=66bf1e14&hm=24de0dbc752c426d5d3c2c3173d28bcd653158adae8b96c7bd37084e1f230aac&" alt="Ícone">
-            <h1>Cat Ware</h1>
-        </div>
-        <p class="description">Aqui nesse site você encontra todos os executores atualizados!</p>
-        
-        <div class="box" onclick="handleClick(this)">
-            <p class="title">Fluxus</p>
-            <img src="https://via.placeholder.com/400x200?text=Executor+1" alt="Fluxus">
-            <p class="desc">Updated Fluxus Executor!</p>
-            <a href="https://example.com/executor1" class="button">Download</a>
-        </div>
-        <div class="box" onclick="handleClick(this)">
-            <p class="title">Delta</p>
-            <img src="https://via.placeholder.com/400x200?text=Executor+2" alt="Delta">
-            <p class="desc">Updated Delta Executor!</p>
-            <a href="https://example.com/executor2" class="button">Download</a>
-        </div>
-        <div class="box" onclick="handleClick(this)">
-            <p class="title">Arceus</p>
-            <img src="https://via.placeholder.com/400x200?text=Executor+3" alt="Arceus">
-            <p class="desc">Updated Arceus Executor!</p>
-            <a href="https://example.com/executor3" class="button">Download</a>
-        </div>
-        <div class="box" onclick="handleClick(this)">
-            <p class="title">Codex</p>
-            <img src="https://via.placeholder.com/400x200?text=Executor+4" alt="Codex">
-            <p class="desc">Updated Codex Executor!</p>
-            <a href="https://example.com/executor4" class="button">Download</a>
-        </div>
-        <div class="box" onclick="handleClick(this)">
-            <p class="title">Hydrogen</p>
-            <img src="https://via.placeholder.com/400x200?text=Executor+5" alt="Hydrogen">
-            <p class="desc">Updated Hydrogen Executor!</p>
-            <a href="https://example.com/executor5" class="button">Download</a>
-        </div>
-        <div class="box" onclick="handleClick(this)">
-            <p class="title">Vega X</p>
-            <img src="https://via.placeholder.com/400x200?text=Executor+6" alt="Vega X">
-            <p class="desc">Updated Vega X Executor!</p>
-            <a href="https://example.com/executor6" class="button">Download</a>
-        </div>
-        
-        <!-- Imagem do Discord -->
-        <div class="discord-img-container">
-            <div class="discord-img">
-                <img src="https://cdn.discordapp.com/attachments/1269821932950392914/1273745404424486913/636e0a6cc3c481a15a141738_icon_clyde_white_RGB.png?ex=66bfbb59&is=66be69d9&hm=5d02eb3b205d118c19d9f4e1ea778671c10891e1f2e035c097e88a9f0ac87f37&" alt="Discord Logo" width="50">
-                <span>Discord</span>
-                <a href="https://discord.gg/DJU9ABpwwC" class="button-mini">Entrar</a>
-            </div>
-        </div>
-    </div>
-    
-    <div class="credits">
-        <p><strong>Créditos:</strong> Site desenvolvido por <strong>NoXiter</strong> & <strong>Nysme</strong></p>
-        <p>© Copyright - 2024</p>
+    <!-- Header Section -->
+    <div class="header">
+        <h1>Cat Ware</h1>
+        <p>Aqui nesse site você encontra todos os executores atualizados!</p>
     </div>
 
-    <script src="scripts.js"></script>
+    <!-- Main Content -->
+    <div class="container">
+        <div class="executor" id="fluxus">
+            <img src="https://images.provenexpert.com/6c/55/2cb3d9c01caa9709b98263ede4c4/fluxus-roblox-android-executor_medium_1675254974.jpg" alt="Fluxus">
+            <h2>Fluxus</h2>
+            <p>Updated Fluxus Executor!</p>
+            <button class="btn" onclick="expand('fluxus', 'https://www.mediafire.com/file/myu4hc3796331s5/Fluxus+V2.638.apk/file')">Download</button>
+        </div>
+
+        <div class="executor" id="delta">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsPSvFVjB8xrX266VGweeGaZmOB2Vg31UBrg&s" alt="Delta">
+            <h2>Delta</h2>
+            <p>Updated Delta Executor!</p>
+            <button class="btn" onclick="expand('delta', 'https://www.mediafire.com/file/zneu1o8x2ctzxut/Delta+V2.638.apk/file')">Download</button>
+        </div>
+
+        <div class="executor" id="arceus">
+            <img src="https://yt3.googleusercontent.com/1hrfG369NBzgC0mph5o-QcQGpKTYx-1PXY5qADE_UHwvpzVn3IbYiSE_afSYg8dCygcVKOmf=s900-c-k-c0x00ffffff-no-rj" alt="Arceus">
+            <h2>Arceus</h2>
+            <p>Updated Arceus Executor!</p>
+            <button class="btn" onclick="expand('arceus', 'https://www.mediafire.com/file/lxcaucdnn0gxva6/Arceus_X_NEO_V1.4.0.apk/file')">Download</button>
+        </div>
+
+        <div class="executor" id="codex">
+            <img src="https://play-lh.googleusercontent.com/6kNoyUFDekYr1Z9Yq-Q984J3eEFSqdxbATM6O9L5rBjZANOkXUF6p7z-QBRz1thh0Q0" alt="Codex">
+            <h2>Codex</h2>
+            <p>Updated Codex Executor!</p>
+            <button class="btn" onclick="expand('codex', 'https://www.mediafire.com/file/1n48xn292h4an0o/Codex+V2.638.apk/file')">Download</button>
+        </div>
+
+        <div class="executor" id="hydrogen">
+            <img src="https://i1.sndcdn.com/artworks-7yFoKxV1uIkfFTfC-8FX6vQ-t500x500.jpg" alt="Hydrogen">
+            <h2>Hydrogen</h2>
+            <p>Updated Hydrogen Executor!</p>
+            <button class="btn" onclick="expand('hydrogen', 'https://getcryptic.net')">Download</button>
+        </div>
+
+        <div class="executor" id="vegax">
+            <img src="https://www.softlay.com/downloads/wp-content/uploads/Vega-X-Executor-Logo.png" alt="Vega X">
+            <h2>Vega X</h2>
+            <p>Updated Vega X Executor!</p>
+            <button class="btn" onclick="expand('vegax', 'https://www.mediafire.com/file/ufi5wotqy1ovr98/Vega_X_V2.637.apk/file')">Download</button>
+        </div>
+    </div>
+
+    <!-- Discord Button Section -->
+    <a href="https://discord.com" class="discord-button">
+        <img src="https://static.vecteezy.com/ti/vetor-gratis/p1/6892625-discord-logo-icon-editorial-vector-gratis-vetor.jpg" alt="Discord Logo">
+        Discord
+    </a>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p><strong>Créditos:</strong> Site desenvolvido por <a href="#">NoXiter</a> & <a href="#">Nysme</a></p>
+        <p>&copy; Copyright - 2024</p>
+    </footer>
+
+    <script src="script.js"></script> <!-- Link para o JavaScript externo -->
 </body>
 </html>
