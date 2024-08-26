@@ -7,16 +7,28 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #1a1a1a;
             color: #fff;
             margin: 0;
             padding: 0;
+            position: relative; /* Necessário para o vídeo em fundo */
+            overflow-x: hidden; /* Garante que não haja rolagem horizontal */
+        }
+
+        /* Background Video */
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; /* Coloca o vídeo atrás do conteúdo */
         }
 
         /* Header */
         .header {
-            background-color: #2b2b2b;
-            padding: 20px 0; /* Ajustado para ter espaçamento vertical uniforme */
+            background-color: rgba(43, 43, 43, 0.8); /* Transparência ajustada */
+            padding: 20px 0;
             text-align: center;
             position: fixed;
             width: 100%;
@@ -38,11 +50,15 @@
         }
 
         /* Main Content */
+        .main-content {
+            padding-top: 80px; /* Ajustado para o cabeçalho fixo */
+        }
+
         .container {
             width: 80%;
             max-width: 800px;
-            margin: 100px auto 20px auto; /* Ajustado para o espaço do cabeçalho fixo */
-            background-color: #2b2b2b;
+            margin: 20px auto;
+            background-color: rgba(43, 43, 43, 0.8);
             border-radius: 10px;
             padding: 20px;
             text-align: center;
@@ -55,8 +71,8 @@
 
         .executor {
             position: relative;
-            margin: 40px 0; /* Aumentado para melhor espaçamento */
-            padding: 40px 20px 20px 20px; /* Adicionado espaçamento no topo para acomodar a imagem */
+            margin: 40px 0;
+            padding: 40px 20px 20px 20px;
             background-color: #3a3a3a;
             border-radius: 10px;
             transition: transform 0.2s ease-in-out;
@@ -64,7 +80,7 @@
 
         .executor img {
             position: absolute;
-            top: -30px; /* Ajustado para centralizar a imagem no topo */
+            top: -30px;
             left: 50%;
             transform: translateX(-50%);
             width: 60px;
@@ -111,7 +127,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #2b2b2b;
+            background-color: rgba(43, 43, 43, 0.8);
             border-radius: 10px;
             padding: 10px;
             text-decoration: none;
@@ -119,7 +135,7 @@
             font-size: 20px;
             width: 200px;
             transition: background-color 0.3s ease-in-out;
-            margin: 20px auto 0 auto; /* Centralizado horizontalmente */
+            margin: 20px auto 0 auto;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
         }
 
@@ -135,7 +151,7 @@
 
         /* Footer */
         .footer {
-            background-color: #2b2b2b;
+            background-color: rgba(43, 43, 43, 0.8);
             color: #ccc;
             text-align: center;
             padding: 20px;
@@ -154,54 +170,65 @@
     </style>
 </head>
 <body>
+    <!-- Background Video -->
+    <video class="background-video" autoplay muted loop>
+        <source src="https://cdn.discordapp.com/attachments/1241441857842450545/1277497935638040666/221131706.mp4_1724559918917.mp4?ex=66cd622a&is=66cc10aa&hm=8076f2a0dd1747ee85862d54936b1a16ea39aa5e6ab6dc86e0085217b2d45072&" type="video/mp4">
+        Seu navegador não suporta o elemento de vídeo.
+    </video>
+
     <!-- Header Section -->
     <div class="header">
         <h1>CatWare</h1>
-        <p>All Executors Updated 🔥</p>
+        <p>Download De Todos Os Executores Diretos!<p>
+            <p>No Mediafire </p>
+        </p>
+        
     </div>
 
     <!-- Main Content -->
-    <div class="container">
-        <div class="executor" id="fluxus">
-            <img src="https://images.provenexpert.com/6c/55/2cb3d9c01caa9709b98263ede4c4/fluxus-roblox-android-executor_medium_1675254974.jpg" alt="Fluxus">
-            <h2>Fluxus</h2>
-            <p>Updated Fluxus Executor!</p>
-            <button class="btn" onclick="expand('fluxus', 'https://www.mediafire.com/file/myu4hc3796331s5/Fluxus+V2.638.apk/file')">Download</button>
-        </div>
+    <div class="main-content">
+        <div class="container">
+            <div class="executor" id="fluxus">
+                <img src="https://images.provenexpert.com/6c/55/2cb3d9c01caa9709b98263ede4c4/fluxus-roblox-android-executor_medium_1675254974.jpg" alt="Fluxus">
+                <h2>Fluxus</h2>
+                <p>Updated Fluxus Executor!</p>
+                <button class="btn" onclick="expand('fluxus', 'https://www.mediafire.com/file/myu4hc3796331s5/Fluxus+V2.638.apk/file')">Download</button>
+            </div>
 
-        <div class="executor" id="delta">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsPSvFVjB8xrX266VGweeGaZmOB2Vg31UBrg&s" alt="Delta">
-            <h2>Delta</h2>
-            <p>Updated Delta Executor!</p>
-            <button class="btn" onclick="expand('delta', 'https://www.mediafire.com/file/zneu1o8x2ctzxut/Delta+V2.638.apk/file')">Download</button>
-        </div>
+            <div class="executor" id="delta">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsPSvFVjB8xrX266VGweeGaZmOB2Vg31UBrg&s" alt="Delta">
+                <h2>Delta</h2>
+                <p>Updated Delta Executor!</p>
+                <button class="btn" onclick="expand('delta', 'https://www.mediafire.com/file/zneu1o8x2ctzxut/Delta+V2.638.apk/file')">Download</button>
+            </div>
 
-        <div class="executor" id="arceus">
-            <img src="https://yt3.googleusercontent.com/1hrfG369NBzgC0mph5o-QcQGpKTYx-1PXY5qADE_UHwvpzVn3IbYiSE_afSYg8dCygcVKOmf=s900-c-k-c0x00ffffff-no-rj" alt="Arceus">
-            <h2>Arceus</h2>
-            <p>Updated Arceus Executor!</p>
-            <button class="btn" onclick="expand('arceus', 'https://www.mediafire.com/file/lxcaucdnn0gxva6/Arceus_X_NEO_V1.4.0.apk/file')">Download</button>
-        </div>
+            <div class="executor" id="arceus">
+                <img src="https://yt3.googleusercontent.com/1hrfG369NBzgC0mph5o-QcQGpKTYx-1PXY5qADE_UHwvpzVn3IbYiSE_afSYg8dCygcVKOmf=s900-c-k-c0x00ffffff-no-rj" alt="Arceus">
+                <h2>Arceus</h2>
+                <p>Updated Arceus Executor!</p>
+                <button class="btn" onclick="expand('arceus', 'https://www.mediafire.com/file/lxcaucdnn0gxva6/Arceus_X_NEO_V1.4.0.apk/file')">Download</button>
+            </div>
 
-        <div class="executor" id="codex">
-            <img src="https://play-lh.googleusercontent.com/6kNoyUFDekYr1Z9Yq-Q984J3eEFSqdxbATM6O9L5rBjZANOkXUF6p7z-QBRz1thh0Q0" alt="Codex">
-            <h2>Codex</h2>
-            <p>Updated Codex Executor!</p>
-            <button class="btn" onclick="expand('codex', 'https://www.mediafire.com/file/1n48xn292h4an0o/Codex+V2.638.apk/file')">Download</button>
-        </div>
+            <div class="executor" id="codex">
+                <img src="https://play-lh.googleusercontent.com/6kNoyUFDekYr1Z9Yq-Q984J3eEFSqdxbATM6O9L5rBjZANOkXUF6p7z-QBRz1thh0Q0" alt="Codex">
+                <h2>Codex</h2>
+                <p>Updated Codex Executor!</p>
+                <button class="btn" onclick="expand('codex', 'https://www.mediafire.com/file/1n48xn292h4an0o/Codex+V2.638.apk/file')">Download</button>
+            </div>
 
-        <div class="executor" id="hydrogen">
-            <img src="https://i1.sndcdn.com/artworks-7yFoKxV1uIkfFTfC-8FX6vQ-t500x500.jpg" alt="Hydrogen">
-            <h2>Hydrogen</h2>
-            <p>Updated Hydrogen Executor!</p>
-            <button class="btn" onclick="expand('hydrogen', 'https://getcryptic.net')">Download</button>
-        </div>
+            <div class="executor" id="hydrogen">
+                <img src="https://i1.sndcdn.com/artworks-7yFoKxV1uIkfFTfC-8FX6vQ-t500x500.jpg" alt="Hydrogen">
+                <h2>Hydrogen</h2>
+                <p>Updated Hydrogen Executor!</p>
+                <button class="btn" onclick="expand('hydrogen', 'https://getcryptic.net')">Download</button>
+            </div>
 
-        <div class="executor" id="vegax">
-            <img src="https://www.softlay.com/downloads/wp-content/uploads/Vega-X-Executor-Logo.png" alt="Vega X">
-            <h2>Vega X</h2>
-            <p>Updated Vega X Executor!</p>
-            <button class="btn" onclick="expand('vegax', 'https://www.mediafire.com/file/ufi5wotqy1ovr98/Vega_X_V2.637.apk/file')">Download</button>
+            <div class="executor" id="vegax">
+                <img src="https://www.softlay.com/downloads/wp-content/uploads/Vega-X-Executor-Logo.png" alt="Vega X">
+                <h2>Vega X</h2>
+                <p>Updated Vega X Executor!</p>
+                <button class="btn" onclick="expand('vegax', 'https://www.mediafire.com/file/ufi5wotqy1ovr98/Vega_X_V2.637.apk/file')">Download</button>
+            </div>
         </div>
     </div>
 
@@ -231,15 +258,15 @@
             // Add the expand class to trigger the animation
             element.classList.add('expand');
 
-            // Wait 0.3 seconds before redirecting and shrinking the element
+            // Wait 0.3 segundos antes de redirecionar e encolher o elemento
             setTimeout(function() {
                 element.classList.remove('expand');
                 element.classList.add('shrink');
 
                 setTimeout(function() {
-                    window.location.href = url;  // Redirect after shrinking
-                }, 300);  // Wait for the shrinking animation to complete (0.3s)
-            }, 300);  // Wait 0.3 seconds antes de iniciar a animação de encolhimento
+                    window.location.href = url;  // Redirecionar após encolher
+                }, 300);  // Esperar a animação de encolhimento concluir (0.3s)
+            }, 300);  // Esperar 0.3 segundos antes de iniciar a animação de encolhimento
         }
     </script>
 </body>
